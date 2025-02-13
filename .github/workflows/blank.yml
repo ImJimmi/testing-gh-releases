@@ -6,5 +6,4 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-        echo "${{ github.event.action }}" >> $GITHUB_STEP_SUMMARY
+      - run: echo "${{ github.event.action }}" >> $GITHUB_STEP_SUMMARY
