@@ -6,4 +6,33 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ github.event.action }}" >> $GITHUB_STEP_SUMMARY
+      - name: Print details
+        run: |
+          echo "# `release` event" >> $GITHUB_STEP_SUMMARY
+          echo "- `action`: `"${{ github.event.action }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "- `enterprise`: `"${{ github.event.enterprise }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "- `installation`: `"${{ github.event.installation }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "- `organization`: `"${{ github.event.organization }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "- `release`: `"${{ github.event.release }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "  - `release.assets`: `"${{ github.event.release.assets }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "  - `release.assets_url`: `"${{ github.event.release.assets_url }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "  - `release.author`: `"${{ github.event.release.author }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "  - `release.body`: `"${{ github.event.release.body }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "  - `release.created_at`: `"${{ github.event.release.created_at }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "  - `release.discussion_url`: `"${{ github.event.release.discussion_url }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "  - `release.draft`: `"${{ github.event.release.draft }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "  - `release.html_url`: `"${{ github.event.release.html_url }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "  - `release.id`: `"${{ github.event.release.id }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "  - `release.name`: `"${{ github.event.release.name }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "  - `release.node_id`: `"${{ github.event.release.node_id }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "  - `release.prerelease`: `"${{ github.event.release.prerelease }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "  - `release.published_at`: `"${{ github.event.release.published_at }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "  - `release.reactions`: `"${{ github.event.release.reactions }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "  - `release.tag_name`: `"${{ github.event.release.tag_name }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "  - `release.tarball_url`: `"${{ github.event.release.tarball_url }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "  - `release.target_commitish`: `"${{ github.event.release.target_commitish }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "  - `release.upload_url`: `"${{ github.event.release.upload_url }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "  - `release.url`: `"${{ github.event.release.url }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "  - `release.zipball_url`: `"${{ github.event.release.zipball_url }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "- `repository`: `"${{ github.event.repository }}"`" >> $GITHUB_STEP_SUMMARY
+          echo "- `sender`: `"${{ github.event.sender }}"`" >> $GITHUB_STEP_SUMMARY
