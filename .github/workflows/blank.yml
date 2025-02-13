@@ -1,0 +1,10 @@
+name: CI
+
+on: release
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+        echo "${{ github.event.action }}" >> $GITHUB_STEP_SUMMARY
